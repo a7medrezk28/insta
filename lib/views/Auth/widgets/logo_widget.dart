@@ -1,14 +1,15 @@
 import 'package:flutter/material.dart';
 class LogoInstagram extends StatelessWidget {
   const LogoInstagram({
-    super.key,
+    super.key, required this.fontSize,
   });
 
+ final double fontSize;
   @override
   Widget build(BuildContext context) {
     return Text(
       "Instagram",
-      style: TextStyle(fontSize: 50, fontFamily: "instagram_logo_font"),
+      style: TextStyle(fontSize: fontSize, fontFamily: "instagram_logo_font"),
     );
   }
 }

@@ -20,7 +20,7 @@ class RegisterViewBody extends StatelessWidget{
               SizedBox(
                 height: 30,
               ),
-              LogoInstagram(),
+              LogoInstagram(fontSize: 50,),
               SizedBox(
                 height: 60,
               ),
