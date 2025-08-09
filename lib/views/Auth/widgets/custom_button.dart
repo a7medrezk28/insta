@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 class CustomButton extends StatelessWidget {
-  const CustomButton({super.key, required this.buttonText});
+  const CustomButton({super.key, required this.buttonText, this.onPressed});
 
   final String buttonText;
+ final void Function()? onPressed;
   @override
   Widget build(BuildContext context) {
     return SizedBox(
@@ -13,7 +14,7 @@ class CustomButton extends StatelessWidget {
           backgroundColor: Color(0xff3797EF),
           shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
         ),
-        onPressed: () {},
+        onPressed: onPressed,
         child: Text(
           buttonText,
           style: TextStyle(fontSize: 18, color: Colors.white),
