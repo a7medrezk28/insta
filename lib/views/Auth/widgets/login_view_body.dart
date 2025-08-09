@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:insta/views/Auth/forgot_password_view.dart';
 import 'package:insta/views/Auth/register_view.dart';
 import 'package:insta/views/Auth/widgets/signup_text_widget.dart';
 import 'package:insta/views/home/home_view.dart';
@@ -36,7 +37,9 @@ class LoginViewBody extends StatelessWidget {
               SizedBox(
                 height: 5,
               ),
-               CustomTextButton(text: 'Forgot password?',),
+               CustomTextButton(text: 'Forgot password?',onPressed: (){
+                 Navigator.push(context, MaterialPageRoute(builder: (context) => ForgotPasswordView(),));
+               },),
               SizedBox(
                 height: 20,
               ),
