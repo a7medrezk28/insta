@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:insta/views/home/widgets/stories_list_view.dart';
 
+import 'custom_post_item.dart';
+
 class HomeViewBody extends StatelessWidget {
   const HomeViewBody({super.key});
 
@@ -10,7 +12,7 @@ class HomeViewBody extends StatelessWidget {
       children: [
         SizedBox(height: 10),
         StoryListView(),
-        Row(children: []),
+        CustomPostItem(),
       ],
     );
   }
