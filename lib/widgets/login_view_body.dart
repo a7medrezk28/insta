@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'custom_button.dart';
 import 'custom_text_button.dart';
 import 'custom_text_field.dart';
+import 'divider_with_or_widget.dart';
 import 'login_with_facebook.dart';
 
 class LoginViewBody extends StatelessWidget {
@@ -24,12 +25,14 @@ class LoginViewBody extends StatelessWidget {
              CustomTextField(hintText: 'Password', obscureText: true),
              CustomTextButton(text: 'Forgot password',),
              CustomButton(),
-             LoginWithFacebookWidget()
+             LoginWithFacebookWidget(),
+             DividerWithOrWidget()
           ],
         ),
       ),
     );
   }
 }
+
 
 
