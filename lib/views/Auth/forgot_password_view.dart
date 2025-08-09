@@ -1,49 +1,19 @@
 import 'package:flutter/material.dart';
-import 'package:insta/views/Auth/widgets/custom_button.dart';
-import 'package:insta/views/Auth/widgets/custom_text_field.dart';
-import 'package:insta/views/Auth/widgets/logo_widget.dart';
+
+import 'package:insta/views/Auth/widgets/forgot_password_view_body.dart';
 class ForgotPasswordView extends StatelessWidget {
   const ForgotPasswordView({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        leading: IconButton(onPressed: (){
+          Navigator.pop(context);
+        }, icon: Icon(Icons.arrow_back_ios_new_rounded)),
+      ),
       body: ForgotPasswordViewBody(),
     );
   }
 }
 
-class ForgotPasswordViewBody extends StatelessWidget{
-  const ForgotPasswordViewBody({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return Center(
-      child: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 20.0),
-        child: SingleChildScrollView(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children:  [
-              SizedBox(
-                height: 30,
-              ),
-              LogoInstagram(fontSize: 50,),
-              SizedBox(
-                height: 60,
-              ),
-              CustomTextField(hintText: 'Enter your email'),
-              SizedBox(
-                height: 35,
-              ),
-              CustomButton(buttonText: 'Reset password',onPressed: (){
-
-              },),
-
-            ],
-          ),
-        ),
-      ),
-    );
-  }
-}
