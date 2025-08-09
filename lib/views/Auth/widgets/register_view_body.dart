@@ -47,6 +47,9 @@ class RegisterViewBody extends StatelessWidget{
               SignUpTextWidget(text: 'Log in', title: 'Already have an account?',onPressed: (){
                 Navigator.pop(context);
               },)
+              , SizedBox(
+                height: 50,
+              ),
             ],
           ),
         ),
