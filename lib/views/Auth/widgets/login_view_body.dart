@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:insta/widgets/logo_widget.dart';
-import 'package:insta/widgets/signup_text_widget.dart';
-
+import 'package:insta/views/Auth/register_view.dart';
+import 'package:insta/views/Auth/widgets/signup_text_widget.dart';
 import 'custom_button.dart';
 import 'custom_text_button.dart';
 import 'custom_text_field.dart';
 import 'divider_with_or_widget.dart';
 import 'login_with_facebook.dart';
+import 'logo_widget.dart';
 
 class LoginViewBody extends StatelessWidget {
   const LoginViewBody({super.key});
@@ -19,7 +19,7 @@ class LoginViewBody extends StatelessWidget {
         child: SingleChildScrollView(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
-            children: const [
+            children:  [
               SizedBox(
                 height: 30,
               ),
@@ -39,7 +39,7 @@ class LoginViewBody extends StatelessWidget {
               SizedBox(
                 height: 20,
               ),
-               CustomButton(),
+               CustomButton(buttonText: 'Log In',),
               SizedBox(
                 height: 25,
               ),
@@ -51,7 +51,9 @@ class LoginViewBody extends StatelessWidget {
               SizedBox(
                 height: 30,
               ),
-               SignUpTextWidget()
+               SignUpTextWidget(text: 'Sign Up', title: "Don't have an account?",onPressed: (){
+                 Navigator.push(context, MaterialPageRoute(builder: (context) => RegisterView(),));
+               },)
             ],
           ),
         ),
