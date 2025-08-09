@@ -8,10 +8,13 @@ class HomeViewBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
+    return ListView(
       children: [
         SizedBox(height: 10),
         StoryListView(),
+        CustomPostItem(),
+        CustomPostItem(),
+        CustomPostItem(),
         CustomPostItem(),
       ],
     );

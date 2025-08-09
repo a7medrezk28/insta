@@ -27,8 +27,8 @@ class TopSectionInPostItem extends StatelessWidget {
           ),
         ),
         Padding(
-          padding: const EdgeInsets.only(right: 15.0),
-          child: Icon(Icons.more_horiz,size: 28,),
+          padding: const EdgeInsets.only(right: 8.0),
+          child: IconButton(onPressed: (){}, icon: Icon(Icons.more_horiz,size: 28,),)
         )
       ],
     );

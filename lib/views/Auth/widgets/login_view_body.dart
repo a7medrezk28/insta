@@ -36,7 +36,7 @@ class LoginViewBody extends StatelessWidget {
               SizedBox(
                 height: 5,
               ),
-               CustomTextButton(text: 'Forgot password',),
+               CustomTextButton(text: 'Forgot password?',),
               SizedBox(
                 height: 20,
               ),
