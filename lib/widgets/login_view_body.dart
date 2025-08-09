@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 
+import 'custom_button.dart';
+import 'custom_text_button.dart';
 import 'custom_text_field.dart';
 
-class LoginViewBody extends StatelessWidget{
+class LoginViewBody extends StatelessWidget {
   const LoginViewBody({super.key});
 
   @override
@@ -12,12 +14,15 @@ class LoginViewBody extends StatelessWidget{
         padding: const EdgeInsets.symmetric(horizontal: 20.0),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
-          children: const [
-               Text("Instagram",style: TextStyle(
-                 fontSize: 50,
-                 fontFamily: "instagram_logo_font"
-               ),),
-            CustomTextField()
+          children: [
+            const Text(
+              "Instagram",
+              style: TextStyle(fontSize: 50, fontFamily: "instagram_logo_font"),
+            ),
+            const CustomTextField(hintText: 'User Name'),
+            const CustomTextField(hintText: 'Password', obscureText: true),
+            CustomTextButton(),
+            CustomButton(),
           ],
         ),
       ),

@@ -1,16 +1,20 @@
 import 'package:flutter/material.dart';
 
 class CustomTextField extends StatelessWidget {
-  const CustomTextField({super.key});
+  const CustomTextField({super.key, required this.hintText, this.obscureText=false});
 
+  final String hintText;
+  final bool? obscureText ;
   @override
   Widget build(BuildContext context) {
     return TextField(
+      obscureText: obscureText! ,
       style: TextStyle(
         color: Colors.white
       ),
       decoration: InputDecoration(
-        hintText: "User Name",
+
+        hintText: hintText,
         hintStyle: TextStyle(color: Colors.white.withValues(alpha: .6)),
 
         filled: true,
